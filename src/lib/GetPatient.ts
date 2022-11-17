@@ -23,7 +23,7 @@ export default async function GetPatient(): Promise<DataRespose[]> {
           let Resfugulin = await pool.query(queryFugulin(a.Prontuario));
           let fugulin: number =
             Resfugulin.rows.length > 0 ? Resfugulin.rows[0].medicao : 0;
-          // a.dias = `${(a.dias.days ? a.dias.days > 1 ? `${a.dias.days} dias` : `${a.dias.days} dia` : '')}  ${(a.dias.hours ? a.dias.hours > 1 ? `${a.dias.hours} horas` : `${a.dias.hours} hora` : '')} `
+
           a.dia = `${
             a.dias.days
               ? a.dias.days > 1
